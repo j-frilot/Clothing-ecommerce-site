@@ -4,6 +4,7 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
+  font-weight: 300;
   line-height: 1.8;
 }
 
@@ -33,6 +34,10 @@ a {
   color: #fff;
 }
 
+.blue {
+  color: #0000ff;
+}
+
 h1,
 h2,
 h3,
@@ -41,18 +46,38 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 h3 {
-  font-size: 3.5rem;
+  font-size: 4rem;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 h5 {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a6692;
+}
+
+.btn {
+  background-color: #ff0000;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #eee;
+}
+
+.btn:hover {
+  background-color: #000000;
 }
 /* ************************** */
 /* ----------HEADER---------- */
@@ -67,6 +92,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 500;
 }
 
 nav .nav-logo {
@@ -99,6 +125,7 @@ nav .nav-list li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-transform: uppercase;
 }
 
 .slide-show .slide-show-controls {
@@ -110,6 +137,12 @@ nav .nav-list li {
 .slide-show .slide-show-controls .fa-circle {
   color: #bbb;
   padding: 0 10px;
+  font-size: 10px;
+}
+
+.fa-circle:hover {
+  cursor: pointer;
+  color: #fff;
 }
 
 /* ************************** */
@@ -123,9 +156,13 @@ nav .nav-list li {
   margin-top: 80px;
 }
 
+.fa-chevron-right {
+  font-size: 10px;
+}
+
 .inventory {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 33%);
 }
 
 .card {
@@ -145,4 +182,47 @@ nav .nav-list li {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
+}
+
+/* ************************** */
+/* ----------ABOUT----------- */
+/* ************************** */
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 50px 0;
+}
+
+.about-content ul li {
+  list-style: square;
+}
+
+.about-img {
+  width: 100%;
+}
+
+/* ************************** */
+/* ---------BOTTOM AD-------- */
+/* ************************** */
+.ad {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  margin: 50px 10px;
+  padding: 25px 0;
+}
+
+/* ************************** */
+/* ----------FOOTER---------- */
+/* ************************** */
+
+.footer {
+  margin: 50px 10px;
+  text-transform: uppercase;
+  text-align: center;
 }
