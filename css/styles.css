@@ -112,6 +112,24 @@ nav .nav-list li {
 .active {
   border-bottom: #ff0000 solid 3px;
 }
+
+@media screen and (max-width: 500px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hide-small {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .hide-big {
+    display: none;
+  }
+}
+
 /* ************************** */
 /* --------SLIDESHOW--------- */
 /* ************************** */
@@ -145,6 +163,26 @@ nav .nav-list li {
   color: #fff;
 }
 
+.first-slide,
+.second-slide,
+.third-slide {
+  display: none;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .second-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.third-slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+} */
 /* ************************** */
 /* --------PRODUCTS---------- */
 /* ************************** */
@@ -163,6 +201,17 @@ nav .nav-list li {
 .inventory {
   display: grid;
   grid-template-columns: repeat(3, 33%);
+}
+
+@media only screen and (max-width: 768px) {
+  .section-intro {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .inventory {
+    display: block;
+  }
 }
 
 .card {
@@ -195,6 +244,16 @@ nav .nav-list li {
   margin: 50px 0;
 }
 
+@media only screen and (max-width: 768px) {
+  .about-content {
+    display: block;
+  }
+
+  .about-content-left {
+    margin-bottom: 25px;
+  }
+}
+
 .about-content ul li {
   list-style: square;
 }
@@ -213,8 +272,8 @@ nav .nav-list li {
   align-items: center;
   background-color: #f7f7f7;
   border-radius: 5px;
-  margin: 50px 10px;
-  padding: 25px 0;
+  margin: 40px 20px;
+  padding: 25px 20px;
 }
 
 /* ************************** */

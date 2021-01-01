@@ -1,6 +1,12 @@
 //SLIDE SHOW
 let keys = document.querySelectorAll(".keys")
 
+window.addEventListener('DOMContentLoaded', function(){
+    let firstSlide = document.querySelector(".first-slide")
+    firstSlide.style.display = "flex"
+})
+
+
 keys.forEach(function(key){
     key.addEventListener('click', function(){
         let slides = [
@@ -14,18 +20,36 @@ keys.forEach(function(key){
         let leftKey = document.querySelector(".left");
         let middleKey = document.querySelector(".middle");
         let rightKey = document.querySelector(".right");
+        let firstSlide = document.querySelector(".first-slide")
+        let secondSlide = document.querySelector(".second-slide")
+        let thirdSlide = document.querySelector(".third-slide")
         let slideShow = document.querySelector(".slide-show");
+
+        // change the text and picture when slide change
+        //text set to none / flex
 
         if (key == leftKey) {
             slideShow.style.backgroundImage = "url('images/slide_01.jpg')"
             leftKey.style.color = "white"
+            firstSlide.style.display = "flex"
+            secondSlide.style.display = "none"
+            thirdSlide.style.display = "none"
+
+            
         } else if (key == middleKey) {
             slideShow.style.backgroundImage = "url('images/slide_02.jpg')"
             middleKey.style.color = "white"
+            firstSlide.style.display = "none"
+            secondSlide.style.display = "flex"
+            thirdSlide.style.display = "none"
+
         } else if (key == rightKey){
             slideShow.style.backgroundImage = "url('images/slide_03.jpg')"
             rightKey.style.color = "white"
-
+            firstSlide.style.display = "none"
+            secondSlide.style.display = "none"
+            thirdSlide.style.display = "flex"
+            
         };
     })
 })
@@ -113,3 +137,19 @@ let products = [{
         inventory.innerHTML = showProducts;
 
     });
+
+
+
+
+
+
+/*
+
+
+
+
+
+
+
+
+            */
