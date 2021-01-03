@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded', function(){
     firstSlide.style.display = "flex"
 })
 
-
 keys.forEach(function(key){
     key.addEventListener('click', function(){
         let slides = [
