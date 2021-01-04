@@ -6,149 +6,151 @@ window.addEventListener('DOMContentLoaded', function(){
     firstSlide.style.display = "flex"
 })
 
+let slides = [
+    "url('images/dog-slide_01.jpg')", 
+    "url('images/dog-slide_02.jpg')", 
+    "url('images/dog-slide_03.jpg')",
+];
+
+let picOne = slides[0];
+let picTwo = slides[1];
+let picThree = slides[2];
+
+let leftKey = document.querySelector(".left");
+let middleKey = document.querySelector(".middle");
+let rightKey = document.querySelector(".right");
+let firstSlide = document.querySelector(".first-slide")
+let secondSlide = document.querySelector(".second-slide")
+let thirdSlide = document.querySelector(".third-slide")
+let slideShow = document.querySelector(".slide-show");
+
+// change slide by buttons
 keys.forEach(function(key){
     key.addEventListener('click', function(){
-        let slides = [
-            "url('images/slide_01.jpg')", 
-            "url('images/slide_02.jpg')", 
-            "url('images/slide_03.jpg')",];
-        let picOne = slides[0];
-        let picTwo = slides[1];
-        let picThree = slides[2];
 
-        let leftKey = document.querySelector(".left");
-        let middleKey = document.querySelector(".middle");
-        let rightKey = document.querySelector(".right");
-        let firstSlide = document.querySelector(".first-slide")
-        let secondSlide = document.querySelector(".second-slide")
-        let thirdSlide = document.querySelector(".third-slide")
-        let slideShow = document.querySelector(".slide-show");
-
-        // change the text and picture when slide change
-        //text set to none / flex
+        // change  picture when slide change
 
         if (key == leftKey) {
-            slideShow.style.backgroundImage = "url('images/slide_01.jpg')"
-            leftKey.style.color = "white"
-            firstSlide.style.display = "flex"
-            secondSlide.style.display = "none"
-            thirdSlide.style.display = "none"
-
-            
+            slideShow.style.backgroundImage = picOne;
+            firstSlide.style.display = "flex";
         } else if (key == middleKey) {
-            slideShow.style.backgroundImage = "url('images/slide_02.jpg')"
-            middleKey.style.color = "white"
-            firstSlide.style.display = "none"
-            secondSlide.style.display = "flex"
-            thirdSlide.style.display = "none"
-
-        } else if (key == rightKey){
-            slideShow.style.backgroundImage = "url('images/slide_03.jpg')"
-            rightKey.style.color = "white"
-            firstSlide.style.display = "none"
-            secondSlide.style.display = "none"
-            thirdSlide.style.display = "flex"
-            
+            slideShow.style.backgroundImage = picTwo;
+        } else if (key == rightKey); {
+            slideShow.style.backgroundImage = picThree;
         };
     })
 })
 
+
+///////////////FOR AUTO SLIDES//////////////////
+
+slideCount = 0
+function autoSlide () {
+
+    // left.style.display = "none";
+    // right.style.display = "none";
+
+    slideImage = slideShow.style.backgroundImage = slides[slideCount]
+    slideCount ++;
+
+    if ( slideCount >= slides.length) {
+        slideCount = 0;
+    }
+
+    console.log(slideCount);
+}
+setInterval(autoSlide, 3000);
+
 // END SLIDE SHOW CONTENT
+
+
+
+
 
 // PRODUCTS
 
 let products = [{
-    img: "/images/product_01.jpg",
-    title : "title 1",
-    price : "$25.75",
+    img: "/images/products_01.jpg",
+    name : "name 1",
+    age : "4 years",
+    breed : "labrador",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    rate : "*****",
-    reviews : "Reviews (24)"
+    gender : "male",
+    location : "Hattiesburg"
     }, 
     {
-    img: "/images/product_02.jpg",
-    title : "title 2",
-    price : "$30.25",
+    img: "/images/products_02.jpg",
+    name : "name 2",
+    age : "4 years",
+    breed : "labrador",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    rate : "*****",
-    reviews : "Reviews (21)"
+    gender : "male",
+    location : "Vicksburg"
     }, 
     {
-    img: "/images/product_03.jpg",
-    title : "title 3",
-    price : "$20.45",
+    img: "/images/products_03.jpg",
+    name : "name 3",
+    age : "4 years",
+    breed : "labrador",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    rate : "*****",
-    reviews : "Reviews (36)"
+    gender : "male",
+    location : "Brookhaven"
     }, 
     {
-    img: "/images/product_04.jpg",
-    title : "title 4",
-    price : "$15.25",
+    img: "/images/products_04.jpg",
+    name : "name 4",
+    age : "4 years",
+    breed : "labrador",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    rate : "*****",
-    reviews : "Reviews (48)"
+    gender : "male",
+    location : "Jackson"
     }, 
     {
-    img: "/images/product_05.jpg", 
-    title : "title 5",
-    price : "$12.50",
+    img: "/images/products_05.jpg", 
+    name : "name 5",
+    age : "4 years",
+    breed : "labrador",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    rate : "*****",
-    reviews : "Reviews (16)"
+    gender : "male",
+    location : "Natchez"
     },  
     {
-    img: "/images/product_06.jpg",
-    title : "title 6",
-    price : "$22.50",
+    img: "/images/products_06.jpg",
+    name : "name 6",
+    age : "4 years",
+    breed : "labrador",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    rate : "*****",
-    reviews : "Reviews (32)"
+    gender : "male",
+    location : "Gulfport"
     }]
 
-    window.addEventListener('DOMContentLoaded', function(){
-        let inventory = document.querySelector(".inventory");
+window.addEventListener('DOMContentLoaded', function(){
+    let inventory = document.querySelector(".inventory");
 
-        let showProducts = products.map(function(product){
-            return `<div class="card">
-                        <img src=${product.img} alt="product-1" class="product-pic">
-    
-                        <div class="card-content">
-    
-                            <div class="card-head">
-                                <h5><a href="#">${product.title}</a> </h5>
-                                <div class="price"><h5>${product.price}</h5></div>
-                            </div>
-    
-                            <div class="card-body">
-                                <div class="desc">${product.desc}</div>
-                            </div>
-    
-                            <div class="card-footer">
-                                <div class="rate red">${product.rate}</div>
-                                <div class="reviews red">${product.reviews}</div>
-                            </div>
+    let showProducts = products.map(function(product){
+        return `<div class="card">
+                    <img src=${product.img} alt="product-1" class="product-pic">
+
+                    <div class="card-content">
+                        <h5><a href="#">${product.name}</a> </h5>
+                        <div class="card-head">
+                            <h5><a href="#">${product.age}</a> </h5>
+                            <div class="breed"><h5>${product.breed}</h5></div>
                         </div>
-            
-                    </div>`
-        });
-        showProducts = showProducts.join("");
-        inventory.innerHTML = showProducts;
 
+                        <div class="card-body">
+                            <div class="desc">${product.desc}</div>
+                        </div>
+
+                        <div class="card-footer">
+                            <div class="rate red">${product.gender}</div>
+                            <div class="location red">${product.location}</div>
+                        </div>
+                    </div>
+        
+                </div>`
     });
+    showProducts = showProducts.join("");
+    inventory.innerHTML = showProducts;
 
-
-
-
-
-
-/*
-
-
-
-
-
-
-
-
-            */
+});
