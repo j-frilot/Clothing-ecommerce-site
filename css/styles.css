@@ -75,6 +75,8 @@ h5 {
   border-radius: 5px;
   padding: 10px 15px;
   color: #eee;
+  outline: none;
+  border: none;
 }
 
 .btn:hover {
@@ -181,17 +183,6 @@ nav .nav-list li {
   align-items: center;
 }
 
-/* .second-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.third-slide {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-} */
 /* ************************** */
 /* --------PRODUCTS---------- */
 /* ************************** */
@@ -276,25 +267,43 @@ nav .nav-list li {
 }
 
 /* ************************** */
-/* ---------BOTTOM AD-------- */
+/* ----------FOOTER---------- */
 /* ************************** */
-.ad {
+
+.danger {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   background-color: #f7f7f7;
   border-radius: 5px;
-  margin: 40px 20px;
-  padding: 25px 20px;
+  margin: 20px;
+  padding: 25px;
 }
-
-/* ************************** */
-/* ----------FOOTER---------- */
-/* ************************** */
 
 .footer {
   margin: 50px 10px;
   text-transform: uppercase;
   text-align: center;
+}
+
+/* ************************** */
+/* --------ALL PETS---------- */
+/* ************************** */
+.find {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #f7f7f7;
+  margin: 20px;
+  padding: 20px;
+}
+
+.find h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.find h3 {
+  font-size: 1.5rem;
 }

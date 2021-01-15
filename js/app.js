@@ -7,9 +7,9 @@ window.addEventListener('DOMContentLoaded', function(){
 })
 
 let slides = [
-    "url('images/dog-slide_01.jpg')", 
-    "url('images/dog-slide_02.jpg')", 
-    "url('images/dog-slide_03.jpg')",
+    "url('images/home/slide_01.jpg')", 
+    "url('images/home/slide_02.jpg')", 
+    "url('images/home/slide_03.jpg')",
 ];
 
 let picOne = slides[0];
@@ -70,7 +70,7 @@ setInterval(autoSlide, 3000);
 // PRODUCTS
 
 let products = [{
-    img: "/images/products_01.jpg",
+    img: "/images/home/dog-1.jpg",
     name : "name 1",
     age : "4 years",
     breed : "labrador",
@@ -79,7 +79,7 @@ let products = [{
     location : "Hattiesburg"
     }, 
     {
-    img: "/images/products_02.jpg",
+    img: "/images/home/dog-2.jpg",
     name : "name 2",
     age : "4 years",
     breed : "labrador",
@@ -88,7 +88,7 @@ let products = [{
     location : "Vicksburg"
     }, 
     {
-    img: "/images/products_03.jpg",
+    img: "/images/home/dog-3.jpg",
     name : "name 3",
     age : "4 years",
     breed : "labrador",
@@ -97,7 +97,7 @@ let products = [{
     location : "Brookhaven"
     }, 
     {
-    img: "/images/products_04.jpg",
+    img: "/images/home/dog-4.jpg",
     name : "name 4",
     age : "4 years",
     breed : "labrador",
@@ -106,7 +106,7 @@ let products = [{
     location : "Jackson"
     }, 
     {
-    img: "/images/products_05.jpg", 
+    img: "/images/home/dog-5.jpg", 
     name : "name 5",
     age : "4 years",
     breed : "labrador",
@@ -115,7 +115,7 @@ let products = [{
     location : "Natchez"
     },  
     {
-    img: "/images/products_06.jpg",
+    img: "/images/home/dog-6.jpg",
     name : "name 6",
     age : "4 years",
     breed : "labrador",

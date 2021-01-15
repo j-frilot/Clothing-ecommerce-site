@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- flav -->
+    
+    <!-- /flav/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Love Paws</title>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h1 class="nav-logo"><a href="index.html">Love <span class="red">Paws</span> </a></h1>
+            <ul class=" nav-list ">
+                <li class="nav-link hide-small"><a href="index.html">Home</a></li>
+                <li class="nav-link active hide-small"><a href="inventory.html">All Pets</a></li>
+                <li class="nav-link hide-small"><a href="about.html">About</a></li>
+                <li class="nav-link hide-small"><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <nav class="container hide-big">
+            <ul class="nav-list">
+                <li class="nav-link"><a href="index.html">Home</a></li>
+                <li class="nav-link active"><a href="inventory.html">Products</a></li>
+            </ul>
+        </nav>
+        <nav class="container hide-big">
+            <ul class="nav-list">
+                <li class="nav-link"><a href="about.html">About</a></li>
+                <li class="nav-link"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    
+    <main class="container">
+        <section class="find">
+            <form class="pet-form">
+                <h2>Find a pet just for you!</h2>
+                <div class="gender-group"><h3>Gender</h3>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <div class="size-group"><h3>Size</h3>
+                    <input type="radio" name="size" id="small" value="small">
+                    <label for="small">Small</label>
+                    <input type="radio" name="size" id="medium" value="medium">
+                    <label for="medium">Medium</label>
+                    <input type="radio" name="size" id="large" value="large">
+                    <label for="large">Large</label>
+                </div>
+                <div class="color-group"><h3>Color</h3>
+                    <input type="radio" name="color" id="black" value="black">
+                    <label for="black">Black</label>
+                    <input type="radio" name="color" id="brown" value="brown">
+                    <label for="brown">Brown</label>
+                    <input type="radio" name="color" id="white" value="white">
+                    <label for="white">White</label>
+                </div>
+                <button type="submit" class="pet-search btn">Search</button>
+            </form>
+            <div class="find-pet-frame">
+                <img src="/images/products_01.jpg" alt="">
+                <p>Bob</p>
+            </div>
+        </section>
+
+        <section class="all-pets">
+            <div class="section-intro">
+                <h4>All Pals</h4>
+            </div>
+
+            <div class="inventory">
+                
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="container">
+        <section class="danger">
+            <div class="content">
+                <h5>Animal In Danger?</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae assumenda libero architecto dignissimos nesciunt!</p>
+            </div>
+            
+            <a href="#" class="btn">Call Now</a>
+        </section>
+        <hr>
+    </footer>
+
+    <script src="/js/inventory.js"></script>
+</body>
+</html>
