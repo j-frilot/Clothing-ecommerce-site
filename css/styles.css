@@ -151,6 +151,15 @@ nav .nav-list li {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 2rem;
+  }
+  .slide-show {
+    height: 400px;
+  }
+}
+
 .slide-show .white {
   background-color: red;
   opacity: 0.5;
