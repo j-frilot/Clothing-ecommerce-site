@@ -1,5 +1,5 @@
 //SLIDE SHOW
-let keys = document.querySelectorAll(".keys")
+
 
 window.addEventListener('DOMContentLoaded', function(){
     let firstSlide = document.querySelector(".first-slide")
@@ -7,42 +7,16 @@ window.addEventListener('DOMContentLoaded', function(){
 })
 
 let slides = [
-    "url('images/home/slide_01.jpg')", 
-    "url('images/home/slide_02.jpg')", 
-    "url('images/home/slide_03.jpg')",
+    "url('images/home/dog-1.jpg')", 
+    "url('images/home/dog-5.jpg')", 
+    "url('images/home/dog-6.jpg')",
 ];
 
 let picOne = slides[0];
 let picTwo = slides[1];
 let picThree = slides[2];
 
-let leftKey = document.querySelector(".left");
-let middleKey = document.querySelector(".middle");
-let rightKey = document.querySelector(".right");
-let firstSlide = document.querySelector(".first-slide")
-let secondSlide = document.querySelector(".second-slide")
-let thirdSlide = document.querySelector(".third-slide")
 let slideShow = document.querySelector(".slide-show");
-
-// change slide by buttons
-keys.forEach(function(key){
-    key.addEventListener('click', function(){
-
-        // change  picture when slide change
-
-        if (key == leftKey) {
-            slideShow.style.backgroundImage = picOne;
-            firstSlide.style.display = "flex";
-        } else if (key == middleKey) {
-            slideShow.style.backgroundImage = picTwo;
-        } else if (key == rightKey); {
-            slideShow.style.backgroundImage = picThree;
-        };
-    })
-})
-
-
-///////////////FOR AUTO SLIDES//////////////////
 
 slideCount = 0
 function autoSlide () {
@@ -56,8 +30,6 @@ function autoSlide () {
     if ( slideCount >= slides.length) {
         slideCount = 0;
     }
-
-    console.log(slideCount);
 }
 setInterval(autoSlide, 3000);
 
@@ -70,58 +42,64 @@ setInterval(autoSlide, 3000);
 // PRODUCTS
 
 let products = [{
-    img: "/images/home/dog-1.jpg",
-    name : "name 1",
+    id: 7,
+    name : "Jack",
     age : "4 years",
-    breed : "labrador",
+    breed : "Shar-pei",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
     gender : "male",
-    location : "Hattiesburg"
+    color: "Black",
+    img: "/images/inventory/shar-pei.jpeg",
     }, 
     {
-    img: "/images/home/dog-2.jpg",
-    name : "name 2",
-    age : "4 years",
-    breed : "labrador",
+    id: 8,
+    name : "Ellie",
+    age : "1 years",
+    breed : "Terrier Mix",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    gender : "male",
-    location : "Vicksburg"
+    gender : "female",
+    color: "black",
+    img: "/images/inventory/terrier-mix.jpeg",
     }, 
     {
-    img: "/images/home/dog-3.jpg",
-    name : "name 3",
-    age : "4 years",
-    breed : "labrador",
+    id: 9,
+    name : "Thor",
+    age : "6 years",
+    breed : "Sheppard",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
     gender : "male",
-    location : "Brookhaven"
+    color: "brown",
+    img: "/images/inventory/shepard.jpeg",
+}, 
+    {
+    id: 10,
+    name : "Chloe",
+    age : "3 years",
+    breed : "Husky",
+    desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+    gender : "female",
+    color: "Tan, White",
+    img: "/images/inventory/dog-10.jpg",
     }, 
     {
-    img: "/images/home/dog-4.jpg",
-    name : "name 4",
-    age : "4 years",
-    breed : "labrador",
+    id: 11,
+    name : "Toby",
+    age : "5 years",
+    breed : "Pit Bull Terrier",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
     gender : "male",
-    location : "Jackson"
-    }, 
-    {
-    img: "/images/home/dog-5.jpg", 
-    name : "name 5",
-    age : "4 years",
-    breed : "labrador",
-    desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    gender : "male",
-    location : "Natchez"
+    color: "brown",
+    img: "/images/inventory/dog-11.jpg", 
     },  
     {
-    img: "/images/home/dog-6.jpg",
-    name : "name 6",
+    id: 12,
+    name : "Holly",
     age : "4 years",
-    breed : "labrador",
+    breed : "Shepard",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
     gender : "male",
-    location : "Gulfport"
+    img: "/images/inventory/dog-12.jpg",
+    color: "tan"
     }]
 
 window.addEventListener('DOMContentLoaded', function(){
@@ -129,28 +107,67 @@ window.addEventListener('DOMContentLoaded', function(){
 
     let showProducts = products.map(function(product){
         return `<div class="card">
-                    <img src=${product.img} alt="product-1" class="product-pic">
-
                     <div class="card-content">
-                        <h5><a href="#">${product.name}</a> </h5>
+                        <div class="card-img">
+                            <img src=${product.img} alt="product-1" class="img product-pic">
+                        </div>
+                        
+
                         <div class="card-head">
-                            <h5><a href="#">${product.age}</a> </h5>
-                            <div class="breed"><h5>${product.breed}</h5></div>
+                            <h5><a href="#">${product.name}</a> </h5>
+                            <h5>${product.gender}</h5>
                         </div>
 
                         <div class="card-body">
-                            <div class="desc">${product.desc}</div>
-                        </div>
+                                <div class="desc"><p>${product.desc}</p></div>
+                            </div>
 
                         <div class="card-footer">
-                            <div class="rate red">${product.gender}</div>
-                            <div class="location red">${product.location}</div>
+                            <h5>${product.age} old</h5>
+                            <div class="breed"><h5>${product.breed}</h5></div>
                         </div>
                     </div>
-        
                 </div>`
     });
     showProducts = showProducts.join("");
     inventory.innerHTML = showProducts;
 
 });
+
+
+/////number incrementer
+
+let rescueNum = document.querySelector(".rescue-num");
+let adoptNum = document.querySelector(".adopt-num");
+let volunteerNum = document.querySelector(".volunteer-num");
+
+
+
+
+let rescueCount = 1;
+setInterval(()=>{
+    if (rescueCount < 342){
+        rescueCount++;
+        rescueNum.innerText = rescueCount;
+    }
+}, 3)
+
+let adoptCount = 1;
+setInterval(()=>{
+    if (adoptCount < 155){
+        adoptCount++;
+        adoptNum.innerText = adoptCount;
+    }
+}, 10)
+
+let volunteerCount = 1;
+setInterval(()=>{
+    if (volunteerCount < 50){
+        volunteerCount++;
+        volunteerNum.innerText = volunteerCount;
+    }
+}, 50)
+
+// setTimeout(()=>{
+//     followers.innerText = "Followers on Instagram!"
+// },4700)

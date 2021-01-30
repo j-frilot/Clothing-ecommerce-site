@@ -1,3 +1,10 @@
+:root {
+    --light-bg-clr: #575757;
+    --dark-bg-clr:#212529;
+    --orange-clr: #ff9505;
+}
+
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -27,7 +34,7 @@ a {
 }
 
 .red {
-  color: #ff0000;
+  color: #ff9505;
 }
 
 .white {
@@ -71,16 +78,19 @@ h5 {
 }
 
 .btn {
-  background-color: #ff0000;
+  background-color: #ff9505;
   border-radius: 5px;
   padding: 10px 15px;
-  color: #eee;
   outline: none;
   border: none;
 }
 
 .btn:hover {
   background-color: #000000;
+}
+
+.img {
+    border-radius: 8px;
 }
 /* ************************** */
 /* ----------HEADER---------- */
@@ -113,7 +123,7 @@ nav .nav-list li {
 }
 
 .active {
-  border-bottom: #ff0000 solid 3px;
+  border-bottom: #ff9505 solid 3px;
 }
 
 @media screen and (max-width: 500px) {
@@ -138,10 +148,11 @@ nav .nav-list li {
 /* ************************** */
 
 .slide-show {
-  height: 600px;
-  background-image: url(/images/dog-slide_01.jpg);
+  height: 400px;
+  background-image: url(/images/home/dog-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   filter: grayscale(1);
   filter: sepia(1);
   display: flex;
@@ -156,7 +167,7 @@ nav .nav-list li {
     font-size: 2rem;
   }
   .slide-show {
-    height: 400px;
+    height: 300px;
   }
 }
 
@@ -191,16 +202,48 @@ nav .nav-list li {
   flex-direction: column;
   align-items: center;
 }
+/* ************************** */
+/* --------INTRO--------- */
+/* ************************** */
+.data {
+    background-color: #016fb9;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.data-section {
+    display:grid ;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+
+}
+
+.fa-dog, .fa-heart, .fa-hands-helping {
+    font-size: 62px;
+    color: #ff9505;
+
+}
+
+
+
+
 
 /* ************************** */
 /* --------PRODUCTS---------- */
 /* ************************** */
 
+.products {
+    padding-top: 20px;
+    background-color: #212529;
+    color: #fff;
+}
+
 .section-intro {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 80px;
 }
 
 .fa-chevron-right {
@@ -221,58 +264,36 @@ nav .nav-list li {
   .inventory {
     display: block;
   }
+
+  
 }
 
 .card {
-  border: #666 solid 1px;
-  display: block;
   display: flex;
   flex-direction: column;
   margin: 1rem;
+  color:#1a6692;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: -5px 5px 5px rgba(225, 149, 5, 0.7);
+  padding: 5px;
 }
 
-.card .card-content {
-  padding: 5px 25px;
-}
 
-.card .card-head,
+
+
+.card-head,
 .card-footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
+ display: flex;
+ justify-content: space-around;
+}
+
+.card-body {
+    padding: 0 10px;
 }
 
 .product-pic {
-  height: 170px;
-}
-
-/* ************************** */
-/* ----------ABOUT----------- */
-/* ************************** */
-
-.about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin: 50px 0;
-}
-
-@media only screen and (max-width: 768px) {
-  .about-content {
-    display: block;
-  }
-
-  .about-content-left {
-    margin-bottom: 25px;
-  }
-}
-
-.about-content ul li {
-  list-style: square;
-}
-
-.about-img {
-  width: 100%;
+  max-width: 100%;
 }
 
 /* ************************** */
@@ -315,4 +336,33 @@ nav .nav-list li {
 
 .find h3 {
   font-size: 1.5rem;
+}
+
+/* ************************** */
+/* ----------ABOUT----------- */
+/* ************************** */
+
+.about-content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 10px;
+  margin: 50px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .about-content {
+    display: block;
+  }
+
+  .about-content-left {
+    margin-bottom: 25px;
+  }
+}
+
+.about-content ul li {
+  list-style: square;
+}
+
+.about-img {
+  max-width: 100%;
 }

@@ -1,139 +1,154 @@
 let products = [{
-    img: "/images/inventory/dog-1.jpg",
-    name : "name 1",
-    age : "4 years",
-    breed : "labrador",
+    id: 1,
+    name : "Max",
+    age : "2 years",
+    breed : "Pit Bull",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
     gender : "male",
-    location : "Hattiesburg"
+    color: "Brown",
+    img: "/images/inventory/pit.jpg",
     }, 
     {
-    img: "/images/inventory/dog-2.jpg",
-    name : "name 2",
-    age : "4 years",
-    breed : "labrador",
+    id: 2,
+    name : "Bella",
+    age : "Unknown",
+    breed : "Chihuahua",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    gender : "male",
-    location : "Vicksburg"
+    gender : "female",
+    color:"tan",
+    img: "/images/inventory/chihuahua.jpeg",
     }, 
     {
-    img: "/images/inventory/dog-3.jpg",
-    name : "name 3",
+    id: 3,
+    name : "Buddy",
     age : "4 years",
-    breed : "labrador",
+    breed : "Hound",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
     gender : "male",
-    location : "Brookhaven"
+    color: "Black, White",
+    img: "/images/inventory/hound.jpeg",
     }, 
     {
-    img: "/images/inventory/dog-4.jpg",
-    name : "name 4",
-    age : "4 years",
-    breed : "labrador",
+    id: 4,
+    name : "Daisy",
+    age : "2 years",
+    breed : "Labrador",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    gender : "male",
-    location : "Jackson"
+    gender : "female",
+    color: "Brown",
+    img: "/images/inventory/labrador.jpeg",
     }, 
     {
-    img: "/images/inventory/dog-5.jpg", 
-    name : "name 5",
-    age : "4 years",
-    breed : "labrador",
+    id: 5,
+    name : "Charlie",
+    age : "1 years",
+    breed : "Pitbull, Boxer",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
     gender : "male",
-    location : "Natchez"
+    color: "brown",
+    img: "/images/inventory/pit-boxer.jpg", 
     },  
     {
-    img: "/images/inventory/dog-6.jpg",
-    name : "name 6",
-    age : "4 years",
-    breed : "labrador",
+    id: 6,
+    name : "Coco",
+    age : "5 years",
+    breed : "Poodle",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    gender : "male",
-    location : "Gulfport"
+    gender : "female",
+    color: "white",
+    img: "/images/inventory/poodle.jpg",
     },
     {
-    img: "/images/inventory/dog-7.jpg",
-    name : "name 1",
+    id: 7,
+    name : "Jack",
     age : "4 years",
-    breed : "labrador",
+    breed : "Shar-pei",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
     gender : "male",
-    location : "Hattiesburg"
+    color: "Black",
+    img: "/images/inventory/shar-pei.jpeg",
     }, 
     {
-    img: "/images/inventory/dog-8.jpg",
-    name : "name 2",
-    age : "4 years",
-    breed : "labrador",
+    id: 8,
+    name : "Ellie",
+    age : "1 years",
+    breed : "Terrier Mix",
+    desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
+    gender : "female",
+    color: "black",
+    img: "/images/inventory/terrier-mix.jpeg",
+    }, 
+    {
+    id: 9,
+    name : "Thor",
+    age : "6 years",
+    breed : "Sheppard",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
     gender : "male",
-    location : "Vicksburg"
-    }, 
+    color: "brown",
+    img: "/images/inventory/shepard.jpeg",
+}, 
     {
-    img: "/images/inventory/dog-9.jpg",
-    name : "name 3",
-    age : "4 years",
-    breed : "labrador",
+    id: 10,
+    name : "Chloe",
+    age : "3 years",
+    breed : "Husky",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    gender : "male",
-    location : "Brookhaven"
-    }, 
-    {
+    gender : "female",
+    color: "Tan, White",
     img: "/images/inventory/dog-10.jpg",
-    name : "name 4",
-    age : "4 years",
-    breed : "labrador",
-    desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    gender : "male",
-    location : "Jackson"
     }, 
     {
-    img: "/images/inventory/dog-11.jpg", 
-    name : "name 5",
-    age : "4 years",
-    breed : "labrador",
+    id: 11,
+    name : "Toby",
+    age : "5 years",
+    breed : "Pit Bull Terrier",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
     gender : "male",
-    location : "Natchez"
+    color: "brown",
+    img: "/images/inventory/dog-11.jpg", 
     },  
     {
-    img: "/images/inventory/dog-12.jpg",
-    name : "name 6",
+    id: 12,
+    name : "Holly",
     age : "4 years",
-    breed : "labrador",
+    breed : "Shepard",
     desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
     gender : "male",
-    location : "Gulfport"
+    img: "/images/inventory/dog-12.jpg",
+    color: "tan"
     }]
 
-    window.addEventListener('DOMContentLoaded', function(){
-        let inventory = document.querySelector(".inventory");
+window.addEventListener('DOMContentLoaded', () => {
+    let inventory = document.querySelector(".inventory");
+
+    let showProducts = products.map((product) => {
+        return `<div class="card">
+                    <div class="card-img">
+                        <img src=${product.img} alt="product-1" class="img product-pic">
+                    </div>
     
-        let showProducts = products.map(function(product){
-            return `<div class="card">
-                        <img src=${product.img} alt="product-1" class="product-pic">
-    
-                        <div class="card-content">
-                            <h5><a href="#">${product.name}</a> </h5>
-                            <div class="card-head">
-                                <h5><a href="#">${product.age}</a> </h5>
-                                <div class="breed"><h5>${product.breed}</h5></div>
-                            </div>
-    
-                            <div class="card-body">
-                                <div class="desc">${product.desc}</div>
-                            </div>
-    
-                            <div class="card-footer">
-                                <div class="rate red">${product.gender}</div>
-                                <div class="location red">${product.location}</div>
-                            </div>
-                        </div>
-            
-                    </div>`
-        });
-        showProducts = showProducts.join("");
-        inventory.innerHTML = showProducts;
-    
+
+                    <div class="card-head">
+                        <h5><a href="#">${product.name}</a> </h5>
+                        <h5>${product.gender}</h5>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="desc"><p>${product.desc}</p></div>
+                    </div>
+
+                    <div class="card-footer">
+                        <h5>${product.age}</h5>
+                        <div class="breed"><h5>${product.breed}</h5></div>
+                    </div>
+        
+                </div>`
     });
+    showProducts = showProducts.join("");
+    inventory.innerHTML = showProducts;
+
+});
+
+
+
