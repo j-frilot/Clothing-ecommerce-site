@@ -1,0 +1,237 @@
+
+
+$lightbg: #016fb9;
+$darkbg: #212529;
+$accent: #ff9505;
+$fontone: #0000ff;
+$fonttwo:#fff;
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.container {
+width: 70%;
+margin: auto;
+}
+
+li {
+list-style: none;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin: 0;
+padding: 0;
+font-weight: 500;
+}
+
+h2 {
+font-size: 1.5rem;
+font-weight: 700;
+}
+
+.btn {
+background-color: #ff9505;
+border-radius: 5px;
+padding: 10px 15px;
+outline: none;
+border: none;
+}
+
+.btn:hover {
+background-color: #000000;
+}
+
+.img {
+    border-radius: 8px;
+}
+
+header{
+    background-color: $darkbg;
+    color: $fonttwo;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 500;
+        .nav-logo{
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            .accent {
+                color:$accent;
+            }    
+        }
+        ul{
+            display: flex;
+            li{
+                padding:0 1rem;
+            }
+        }
+        .active{
+            border-bottom: $accent solid 3px;
+        }
+    }
+}
+
+/* --------SLIDESHOW--------- */
+
+.slide-show{
+    height: 400px;
+    background-image: url(/images/home/slide-home.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    filter: grayscale(1);
+    filter: sepia(1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    .first-slide,
+    .second-slide,
+    .third-slide {
+    display: none;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+        font-size: 4rem;
+        padding: 0;
+        }
+    }
+}
+
+/* -----------INTRO---------- */
+
+.data {
+    background-color: $lightbg;
+    color: $fonttwo;
+    padding: 30px 0;
+    text-align: center;
+    &-section {
+        display:grid ;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-content: center;
+        .fa-dog, .fa-heart, .fa-hands-helping {
+            font-size: 62px;
+            color: #ff9505;
+        
+        }
+    }
+}
+
+/* --------PRODUCTS---------- */
+
+.products {
+    padding-top: 20px;
+    background-color:$darkbg;
+    color: $fonttwo;
+    .section-intro {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h4 {
+            font-size: 2rem;
+            font-weight: 400;
+            }
+        .fa-chevron-right {
+            font-size: 15px;
+        }
+    }
+    .inventory {
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        .card {
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            color:#1a6692;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            box-shadow: -5px 5px 5px rgba(225, 149, 5, 0.7);
+            padding: 5px;
+            .card-head,
+            .card-footer {
+            display: flex;
+            justify-content: space-around;
+            }
+            .card-body {
+                padding: 0 10px;
+            }
+            .product-pic {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+/* ----------FOOTER---------- */
+
+footer{
+    background-color: $lightbg;
+    .danger {
+        h5{
+            font-size: 1rem;
+            font-weight: 500;
+            color: $fonttwo;
+        }
+        color: $fonttwo;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 5px;
+        padding: 25px;
+    }
+    hr{
+        margin-bottom: 10px;
+    }
+}
+
+
+/* --------ALL PETS---------- */
+
+.findss{
+    background-color: $lightbg;
+}
+
+.find {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: $lightbg;
+    padding: 30px 0;
+  }
+
+  .find h2 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  
+  .find h3 {
+    font-size: 1.5rem;
+  }
+  
+  @import "media";
