@@ -7,9 +7,9 @@ window.addEventListener('DOMContentLoaded', function(){
 })
 
 let slides = [
-    "url('images/home/dog-1.jpg')", 
-    "url('images/home/dog-5.jpg')", 
-    "url('images/home/dog-6.jpg')",
+    "url('images/home/slide-1.jpg')", 
+    "url('images/home/slide-2.jpg')", 
+    "url('images/home/slide-3.jpg')", 
 ];
 
 let picOne = slides[0];
