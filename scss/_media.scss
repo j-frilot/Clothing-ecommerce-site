@@ -1,0 +1,58 @@
+$break-small: 500px;
+$break-medium: 768px;
+
+
+
+@media only screen and (min-width: $break-medium){
+     .hide-big {
+        display: none;
+    } ;
+    
+};
+
+
+@media only screen and (max-width: $break-medium){
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .hide-small {
+    display: none;
+    }
+
+    .white {
+        font-size: 12px;
+    }
+    .slide-show {
+        height: 300px;
+        
+    }
+    .data-section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section-intro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .inventory{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .about-content {
+    display: block;
+    }
+    .about-content-left {
+    margin-bottom: 25px;
+    }
+    .card-body{
+        display: none;
+    }
+}
