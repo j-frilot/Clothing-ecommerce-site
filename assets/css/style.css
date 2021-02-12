@@ -10,7 +10,7 @@ body {
   line-height: 1.8; }
 
 .container {
-  width: 70%;
+  width: 80%;
   margin: auto; }
 
 li {
@@ -59,6 +59,8 @@ header {
       font-weight: bold;
       font-size: 2rem;
       text-transform: uppercase; }
+      header nav .nav-logo .logo {
+        width: 30px; }
       header nav .nav-logo .accent {
         color: #ff9505; }
     header nav ul {
@@ -114,9 +116,8 @@ header {
 
 /* --------PRODUCTS---------- */
 .products {
-  padding-top: 20px;
-  background-color: #212529;
-  color: #fff; }
+  padding: 20px 0;
+  background-color: #fff; }
   .products .section-intro {
     display: flex;
     justify-content: space-between;
@@ -173,20 +174,50 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: center;
   background-color: #016fb9;
-  padding: 30px 0; }
-
-.find h2 {
-  font-size: 2rem;
-  font-weight: 500; }
-
-.find h3 {
-  font-size: 1.5rem; }
+  padding: 30px 0;
+  text-align: center; }
+  .find img {
+    width: 100px; }
+  .find h2 {
+    font-size: 2.5rem;
+    font-weight: 500; }
+  .find h3 {
+    font-size: 1.5rem; }
 
 /* --------ABOUT CONTENT---------- */
-.about-content {
-  display: flex; }
+.about-section .about-heading {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #016fb9; }
+  .about-section .about-heading h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 3rem;
+    margin: 0 15px; }
+  .about-section .about-heading img {
+    width: 100px; }
 
+.about-section .about-content-desc {
+  text-align: center;
+  margin: auto;
+  width: 60%;
+  padding: 20px 0; }
+
+.about-section .about-content-media {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 0; }
+  .about-section .about-content-media .about-img {
+    max-width: 100%;
+    padding: 5px; }
+
+/* ------------------------------------- */
 @media only screen and (min-width: 768px) {
   .hide-big {
     display: none; } }
