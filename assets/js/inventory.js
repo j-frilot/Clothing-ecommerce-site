@@ -87,37 +87,7 @@ let products = [{
     gender : "male",
     color: "brown",
     img: "images/inventory/shepard.jpeg",
-}, 
-    {
-    id: 10,
-    name : "Chloe",
-    age : "3 years",
-    breed : "Husky",
-    desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    gender : "female",
-    color: "Tan, White",
-    img: "images/inventory/dog-10.jpg",
-    }, 
-    {
-    id: 11,
-    name : "Toby",
-    age : "5 years",
-    breed : "Pit Bull Terrier",
-    desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    gender : "male",
-    color: "brown",
-    img: "images/inventory/dog-11.jpg", 
-    },  
-    {
-    id: 12,
-    name : "Holly",
-    age : "4 years",
-    breed : "Shepard",
-    desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-    gender : "male",
-    img: "images/inventory/dog-12.jpg",
-    color: "tan"
-    }]
+}]
 
 window.addEventListener('DOMContentLoaded', () => {
     let inventory = document.querySelector(".inventory");
@@ -127,22 +97,28 @@ window.addEventListener('DOMContentLoaded', () => {
                     <div class="card-img">
                         <img src=${product.img} alt="product-1" class="img product-pic">
                     </div>
-    
 
-                    <div class="card-head">
-                        <h5><a href="#">${product.name}</a> </h5>
-                        <h5>${product.gender}</h5>
+                    <div class="card-name">
+                        <h1>${product.name}</h1>
                     </div>
 
-                    <div class="card-body">
-                        <div class="desc"><p>${product.desc}</p></div>
+                    <div class="card-age">
+                        <h2>Age</h2>
+                        <h3>${product.age}
                     </div>
 
-                    <div class="card-footer">
-                        <h5>${product.age}</h5>
-                        <div class="breed"><h5>${product.breed}</h5></div>
+                    <div class="card-gender">
+                        <h2>Gender</h2>
+                        <h3>${product.gender}
                     </div>
-        
+
+                    <div class="card-breed">
+                        <h2>Breed</h2>
+                        <h3>${product.breed}
+                    </div>
+
+                    <a href="#" class="card-dog-link"><p>More Info</p></a>
+
                 </div>`
     });
     showProducts = showProducts.join("");

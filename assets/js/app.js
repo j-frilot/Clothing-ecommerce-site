@@ -102,31 +102,36 @@ let products = [{
     color: "tan"
     }]
 
-window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('DOMContentLoaded', () => {
     let inventory = document.querySelector(".inventory");
 
-    let showProducts = products.map(function(product){
+    let showProducts = products.map((product) => {
         return `<div class="card">
-                    <div class="card-content">
-                        <div class="card-img">
-                            <img src=${product.img} alt="product-1" class="img product-pic">
-                        </div>
-                        
-
-                        <div class="card-head">
-                            <h5><a href="#">${product.name}</a> </h5>
-                            <h5>${product.gender}</h5>
-                        </div>
-
-                        <div class="card-body">
-                                <div class="desc"><p>${product.desc}</p></div>
-                            </div>
-
-                        <div class="card-footer">
-                            <h5>${product.age} old</h5>
-                            <div class="breed"><h5>${product.breed}</h5></div>
-                        </div>
+                    <div class="card-img">
+                        <img src=${product.img} alt="product-1" class="img product-pic">
                     </div>
+
+                    <div class="card-name">
+                        <h1>${product.name}</h1>
+                    </div>
+
+                    <div class="card-age">
+                        <h2>Age</h2>
+                        <h3>${product.age}
+                    </div>
+
+                    <div class="card-gender">
+                        <h2>Gender</h2>
+                        <h3>${product.gender}
+                    </div>
+
+                    <div class="card-breed">
+                        <h2>Breed</h2>
+                        <h3>${product.breed}
+                    </div>
+
+                    <a href="#" class="card-dog-link"><p>More Info</p></a>
+
                 </div>`
     });
     showProducts = showProducts.join("");

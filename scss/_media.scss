@@ -7,7 +7,6 @@ $break-medium: 768px;
      .hide-big {
         display: none;
     } ;
-    
 };
 
 
@@ -19,13 +18,11 @@ $break-medium: 768px;
     .hide-small {
     display: none;
     }
-
-    .white {
-        font-size: 12px;
-    }
     .slide-show {
         height: 300px;
-        
+    }
+    .banner-text{
+        font-size: 2.5rem !important;
     }
     .data-section{
         display: flex;

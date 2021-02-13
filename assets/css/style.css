@@ -128,25 +128,24 @@ header {
     .products .section-intro .fa-chevron-right {
       font-size: 15px; }
   .products .inventory {
-    display: grid;
-    grid-template-columns: repeat(3, 33%); }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
     .products .inventory .card {
       display: flex;
+      flex-direction: column;
       flex-wrap: wrap;
-      margin: 5px;
+      text-align: center;
+      margin: 10px;
       color: #1a6692;
       background-color: #f7f7f7;
       border-radius: 8px;
       box-shadow: -5px 5px 5px rgba(225, 149, 5, 0.7);
       padding: 5px; }
-      .products .inventory .card .card-head,
-      .products .inventory .card .card-footer {
-        display: flex;
-        justify-content: space-around; }
-      .products .inventory .card .card-body {
-        padding: 0 10px; }
-      .products .inventory .card .product-pic {
-        width: 100%; }
+      .products .inventory .card h1 {
+        font-size: 2rem; }
+      .products .inventory .card-dog-link {
+        font-size: 1.25rem; }
 
 /* ----------FOOTER---------- */
 footer {
@@ -173,16 +172,17 @@ footer {
 .find {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   background-color: #016fb9;
   padding: 30px 0;
   text-align: center; }
   .find img {
-    width: 100px; }
+    width: 75px; }
   .find h2 {
-    font-size: 2.5rem;
-    font-weight: 500; }
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ff9505; }
   .find h3 {
     font-size: 1.5rem; }
 
@@ -228,10 +228,10 @@ footer {
     flex-direction: column; }
   .hide-small {
     display: none; }
-  .white {
-    font-size: 12px; }
   .slide-show {
     height: 300px; }
+  .banner-text {
+    font-size: 2.5rem !important; }
   .data-section {
     display: flex;
     flex-wrap: wrap; }
