@@ -45,7 +45,7 @@ let products = [
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
         gender: "male",
         color: "Black",
-        img: "images/inventory/shar-pei.jpeg"
+        img: "images/inventory/dog_7.jpeg"
     },
     {
         id: 8,
@@ -56,7 +56,7 @@ let products = [
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
         gender: "female",
         color: "black",
-        img: "images/inventory/terrier-mix.jpeg"
+        img: "images/inventory/dog_8.jpeg"
     },
     {
         id: 9,
@@ -67,40 +67,7 @@ let products = [
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
         gender: "male",
         color: "brown",
-        img: "images/inventory/shepard.jpeg"
-    },
-    {
-        id: 10,
-        name: "Chloe",
-        age: "3 years",
-        breed: "Husky",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "female",
-        color: "Tan, White",
-        img: "images/inventory/dog-10.jpg"
-    },
-    {
-        id: 11,
-        name: "Toby",
-        age: "5 years",
-        breed: "Pit Bull Terrier",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "male",
-        color: "brown",
-        img: "images/inventory/dog-11.jpg"
-    },
-    {
-        id: 12,
-        name: "Holly",
-        age: "4 years",
-        breed: "Shepard",
-        desc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in?",
-        gender: "male",
-        img: "images/inventory/dog-12.jpg",
-        color: "tan"
+        img: "images/inventory/dog_9.jpeg"
     }
 ];
 
@@ -114,25 +81,28 @@ window.addEventListener("DOMContentLoaded", () => {
                     </div>
 
                     <div class="card-name">
-                        <h1>${product.name}</h1>
-                    </div>
+                            <h1>${product.name}</h1>
+                        </div>
+                    <div class="info">
+                        
 
-                    <div class="card-age">
-                        <h2>Age</h2>
-                        <h3>${product.age}
-                    </div>
+                        <div class="card-age">
+                            <h3>${product.age}</h3>
+                        </div>
 
-                    <div class="card-gender">
-                        <h2>Gender</h2>
-                        <h3>${product.gender}
-                    </div>
+                        <div class="card-gender">
+                            <h3>${product.gender}</h3>
+                        </div>
 
-                    <div class="card-breed">
-                        <h2>Breed</h2>
-                        <h3>${product.breed}
-                    </div>
+                        <div class="card-breed">
+                            <h3>${product.breed}</h3>
+                        </div>
 
-                    <a href="#" class="card-dog-link"><p>More Info</p></a>
+                        <a href="#" class="card-dog-link"><h3>More Info</h3></a>
+                    </div>
+                    
+
+                    
 
                 </div>`;
     });
