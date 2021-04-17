@@ -56,10 +56,12 @@
                 <h2>Find a pet just for you!</h2>
             </div>
 
-            <div>
+            <form class="search-form">
                 <div class="gender-group"><h3>Gender</h3>
+
                     <input type="radio" name="gender" id="male" value="male">
                     <label for="male">Male</label>
+
                     <input type="radio" name="gender" id="female" value="female">
                     <label for="female">Female</label>
                 </div>
@@ -67,12 +69,18 @@
                 <div class="color-group"><h3>Color</h3>
                     <input type="radio" name="color" id="black" value="black">
                     <label for="black">Black</label>
+
                     <input type="radio" name="color" id="brown" value="brown">
                     <label for="brown">Brown</label>
+
                     <input type="radio" name="color" id="white" value="white">
                     <label for="white">White</label>
                 </div>
-            </div>
+
+                <button type="submit" class="btn form-submit"> Find </button>
+            </form>
+            <pre id="log">
+            </pre>
             
         </section>
 
@@ -82,7 +90,7 @@
                     <h4>All Pals</h4>
                 </div>
     
-                <div class="inventory">
+                <div class="inventory full-inventory">
                     
     
                 </div>
