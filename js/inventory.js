@@ -309,39 +309,50 @@ window.addEventListener("DOMContentLoaded", () => {
     fullInventory.innerHTML = showAllProducts;
 });
 
+/*
 // SORTING COLORS
 let blacks = [];
 let browns = [];
 let whites = [];
 let otherColors = [];
 
-// dog.color.toLowerCase() == "black".toLowerCase()
-//     ? blacks.push(dog.name)
-//     : dog.color.toLowerCase() == "brown".toLowerCase()
-//     ? browns.push(dog.name)
-//     : dog.color.toLowerCase() == "white".toLowerCase()
-//     ? whites.push(dog.name)
-//     : otherColors.push(dog.name);
+dog.color.toLowerCase() == "black".toLowerCase()
+    ? blacks.push(dog.name)
+    : dog.color.toLowerCase() == "brown".toLowerCase()
+    ? browns.push(dog.name)
+    : dog.color.toLowerCase() == "white".toLowerCase()
+    ? whites.push(dog.name)
+    : otherColors.push(dog.name);
+*/
 
-const submit = document.querySelector(".form-submit");
-const maleInput = document.getElementById("male");
-submit.addEventListener("submit", () => {
-    if (maleInput.checked) {
-        const genderInput = maleInput.value;
-        console.log(genderInput);
-    }
-    allProducts = allProducts.filter(
-        (male) => male.gender.toLowerCase() == "male".toLocaleLowerCase()
-    );
+submit = document.querySelector(".form-submit");
 
-    allProducts = allProducts.filter(
-        (female) =>
-            female.gender.toLocaleLowerCase() == "female".toLocaleLowerCase()
-    );
+/*
+allProducts = allProducts.filter(
+    (female) =>
+        female.gender.toLocaleLowerCase() == "female".toLocaleLowerCase()
+);
 
-    event.preventDefault();
-});
+allProducts = allProducts.filter(
+    (male) => male.gender.toLowerCase() == "male".toLocaleLowerCase()
+);
+*/
 
-const foo = () => {};
+const getForm = () => {
+    console.log("Getting the form data.");
+    var gender = document.querySelector(input);
+    console.log(gender);
+};
 
-submit.addEventListener("submit", foo);
+submit.addEventListener("submit", getForm());
+
+// function getForm() {
+//     console.log("Getting the form data.");
+//     var input = document.querySelectorAll("gender");
+//     console.log(input);
+//     for (i = 0; i < input.length; i++) {
+//         if (input[i].checked) {
+//             console.log(input[i].value);
+//         }
+//     }
+// }
