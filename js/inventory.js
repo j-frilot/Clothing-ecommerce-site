@@ -309,50 +309,39 @@ window.addEventListener("DOMContentLoaded", () => {
     fullInventory.innerHTML = showAllProducts;
 });
 
+// SORTING COLORS
 let blacks = [];
 let browns = [];
 let whites = [];
 let otherColors = [];
 
-// SORTING COLORS
-allProducts.forEach((dog) => {
-    dog.color.toLowerCase() == "black".toLowerCase()
-        ? blacks.push(dog.name)
-        : dog.color.toLowerCase() == "brown".toLowerCase()
-        ? browns.push(dog.name)
-        : dog.color.toLowerCase() == "white".toLowerCase()
-        ? whites.push(dog.name)
-        : otherColors.push(dog.name);
-});
-
-// SEARCH FORM
+// dog.color.toLowerCase() == "black".toLowerCase()
+//     ? blacks.push(dog.name)
+//     : dog.color.toLowerCase() == "brown".toLowerCase()
+//     ? browns.push(dog.name)
+//     : dog.color.toLowerCase() == "white".toLowerCase()
+//     ? whites.push(dog.name)
+//     : otherColors.push(dog.name);
 
 const submit = document.querySelector(".form-submit");
-
-// SORTING MALES / FEMALES
-
-submit.addEventListener("click", () => {
-    const genderBtns = document.querySelectorAll('input[name="gender"]');
-    let selectedGender;
-    for (let genderBtn of genderBtns) {
-        if (genderBtn.checked) {
-            selectedGender = genderBtn.value;
-            break;
-        }
+const maleInput = document.getElementById("male");
+submit.addEventListener("submit", () => {
+    if (maleInput.checked) {
+        const genderInput = maleInput.value;
+        console.log(genderInput);
     }
+    allProducts = allProducts.filter(
+        (male) => male.gender.toLowerCase() == "male".toLocaleLowerCase()
+    );
 
-    for (i = 0; i <= allProducts.length; i++) {
-        if (!allProducts.gender.toLowerCase() == selectedGender.toLowerCase()) {
-            allProducts[i].style.display = hide;
-        }
-    }
+    allProducts = allProducts.filter(
+        (female) =>
+            female.gender.toLocaleLowerCase() == "female".toLocaleLowerCase()
+    );
 
-    // let males = [];
-    // let females = [];
-
-    // selectedGender.toLowerCase() == "male".toLowerCase()
-    //     ? males.push(dog.name)
-    //     : females.push(dog.name);
-
-    // console.log(males);
+    event.preventDefault();
 });
+
+const foo = () => {};
+
+submit.addEventListener("submit", foo);

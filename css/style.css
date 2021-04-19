@@ -56,7 +56,10 @@ h2 {
 .img {
     border-radius: 8px;
 }
-
+.hide {
+    display: none;
+}
+/* --------HOME PAGE--------- */
 header {
     background-color: #212529;
     color: #fff;
